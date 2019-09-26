@@ -1,0 +1,12 @@
+{
+  "require": {
+    "dueros/bot-sdk": "^2.2",
+    "guzzlehttp/guzzle": "~6.0",
+    "vlucas/phpdotenv": "^3.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  }
+}
