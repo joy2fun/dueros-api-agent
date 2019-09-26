@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
 
-if [ !-d "vendor" ]; then
-  composer install -nq
+if [ ! -d "vendor" ]; then
+  composer install -n
 fi
 
 # first arg is `-f` or `--some-option`
