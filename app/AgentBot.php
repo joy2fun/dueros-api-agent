@@ -61,8 +61,10 @@ class AgentBot extends Bot {
         try {
             $client = new Client;
             $response = $client->post($api, [
-                'intent' => $this->intent,
-                'slots' => $this->slots,
+                'form_params' => [
+                    'intent' => $this->intent,
+                    'slots' => $this->slots,
+                ]
             ]);
             $content = $response->getBody();
             $data = json_decode($content, true);
