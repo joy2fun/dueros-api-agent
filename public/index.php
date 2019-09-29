@@ -6,8 +6,10 @@ require (ROOT_PATH . '/vendor/autoload.php');
 
 header("Content-Type: application/json");
 
-$env = Dotenv\Dotenv::create(ROOT_PATH);
-$env->load();
+if (is_file(ROOT_PATH . '/.env') ) {
+    $env = Dotenv\Dotenv::create(ROOT_PATH);
+    $env->load();
+}
 
 $app = new App\AgentBot;
 echo $app->run();

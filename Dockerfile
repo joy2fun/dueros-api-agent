@@ -4,4 +4,4 @@ RUN curl -s https://raw.githubusercontent.com/composer/getcomposer.org/ba13e3fc7
 
 COPY --chown=www-data:www-data /. /app
 
-RUN cd /app && composer install -n
+RUN cd /app && touch .env && composer install -n
